@@ -267,7 +267,8 @@ const EditProfile = ({
 
         <input type="submit" className="btn btn-primary my-1" />
         <Link className="btn btn-light my-1" to="/dashboard">
-          Go Back
+          <i className="fas fa-user"></i>{" "}
+          <span className="hide-sm">Dashboard</span>
         </Link>
       </form>
     </Fragment>
