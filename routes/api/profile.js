@@ -341,7 +341,7 @@ router.get("/github/:username", (req, res) => {
   try {
     const options = {
       uri: encodeURI(
-        `https://api.github.com/users/${req.params.username}/repos?per_page=5&sort=created:asc`
+        `https://api.github.com/users/${req.params.username}/repos?per_page=5`
       ),
       method: "GET",
       headers: {
@@ -362,7 +362,6 @@ router.get("/github/:username", (req, res) => {
     });
   } catch (err) {
     console.error(err.message);
-
     res.status(500).send("Server Error");
   }
 });
